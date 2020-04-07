@@ -1,0 +1,31 @@
+<div style="background-color: white;height: 900px">
+<h2>能源管理系统信息修改</h2>
+
+<table class="table table-bordered table-striped"  style="margin-top: 10px">
+  <tr>
+    <th>编号:</th>
+    <td>{{hero.id}}</td>
+  </tr>
+  <tr>
+    <th>姓名: </th>
+    <td>{{hero.name}}</td>
+  </tr>
+  <tr>
+    <th>设备管理: </th>
+    <td><input [(ngModel)]="hero.Equipmentmanagement" placeholder="department"   style="border-radius: 5px"/></td>
+  </tr>
+  <tr>
+    <th>开启时间: </th>
+    <td> <input [(ngModel)]="hero.Openingtime" placeholder="post"  style="border-radius: 5px" /></td>
+  </tr>
+  <tr>
+    <th>设备状态: </th>
+    <td>   <input [(ngModel)]="hero.devicestatus" placeholder="Entrytime"  style="border-radius: 5px"/></td>
+  </tr>
+</table>
+<div >
+  <button (click)="goBack()" class="btn btn-primary btn-lg">返回</button>
+  <button (click)="save()" class="btn btn-success btn-lg">保存</button>
+</div>
+</div>
+

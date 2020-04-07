@@ -1,0 +1,40 @@
+<div style="background-color: white;height: 900px">
+  <h2>人员管理系统</h2>
+  <div>
+    <label>姓名:</label> <input #heroName placeholder="请填写新员工姓名" style="border-radius: 5px"/>
+    <button (click)="add(heroName.value); heroName.value=''" class="btn btn-danger">
+      添加
+    </button>
+    <button [routerLink]="['/dashboard']" style="float: right;margin-right: 10px">
+      返回上一页
+    </button>
+  </div>
+  <table class="table  table-striped" style="margin-top: 20px">
+    <tr>
+      <th>编号</th>
+      <th>姓名</th>
+      <th>部门</th>
+      <th>职务</th>
+      <th>入职时间</th>
+      <th>电话</th>
+      <th>人员性质</th>
+      <th>操作</th>
+    </tr>
+    <tr  *ngFor="let hero of heroes" (click)="onSelect(hero)"
+         [class.selected]="hero === selectedHero">
+      <td>{{hero.id}}</td>
+      <td>{{hero.name}}</td>
+      <td>{{hero.department}}</td>
+      <td>{{hero.post}}</td>
+      <td>{{hero.Entrytime}}</td>
+      <td>{{hero.Telephone}}</td>
+      <td>{{hero.situation}}</td>
+
+      <td><button (click)="delete(hero); $event.stopPropagation()" class="btn btn-primary">删除</button>
+        <button (click)="gotoDetail()" class="btn btn-success">编辑</button>
+      </td>
+    </tr>
+  </table>
+
+
+</div>

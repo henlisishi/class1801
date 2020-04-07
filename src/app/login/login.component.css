@@ -1,0 +1,27 @@
+.login-window {
+    height: 100%;
+    background-size: 100% 100%;
+    background-image: url(../../assets/welcome.jpg)  ;
+padding-top: -10px;
+}
+
+.fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+/*.login-card {*/
+    /*padding-left: 300px;*/
+    /*margin: auto;*/
+
+/*}*/
+
+
+/*.login-card-left {*/
+
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*padding: 100px 0;*/
+/*}*/

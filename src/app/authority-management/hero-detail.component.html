@@ -1,0 +1,44 @@
+<div style="background-color: white;height: 900px">
+  <h2>人员管理系统信息修改</h2>
+
+  <table class="table table-bordered table-striped" *ngIf="hero" style="margin-top: 10px">
+    <tr>
+      <th>编号:</th>
+      <td>{{hero.id}}</td>
+    </tr>
+    <tr>
+      <th>姓名: </th>
+      <td>{{hero.name}}</td>
+    </tr>
+    <tr>
+      <th>部门: </th>
+      <td><input [(ngModel)]="hero.department" placeholder="department"   style="border-radius: 5px"/></td>
+    </tr>
+    <tr>
+      <th>职务: </th>
+      <td> <input [(ngModel)]="hero.post" placeholder="post"  style="border-radius: 5px" /></td>
+    </tr>
+    <tr>
+      <th>入职时间: </th>
+      <td>   <input [(ngModel)]="hero.Entrytime" placeholder="Entrytime"   style="border-radius: 5px"/></td>
+    </tr>
+    <tr>
+      <th>电话: </th>
+      <td>  <input [(ngModel)]="hero.Telephone" placeholder="Telephone"  style="border-radius: 5px" /></td>
+    </tr>
+    <tr>
+      <th>人员性质: </th>
+      <td> <input [(ngModel)]="hero.situation" placeholder="situation"  style="border-radius: 5px"/></td>
+    </tr>
+  </table>
+  <div >
+    <button (click)="goBack()" class="btn btn-primary btn-lg">返回</button>
+    <button (click)="save()" class="btn btn-success btn-lg">保存</button>
+  </div>
+
+
+
+
+</div>
+
+

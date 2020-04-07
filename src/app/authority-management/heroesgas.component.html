@@ -1,0 +1,32 @@
+<div style="background-color: white;height: 900px">
+  <h1></h1>
+  <div>
+    <label>姓名:</label> <input #heroName placeholder="请填写管理者姓名"  style="border-radius: 5px"/>
+    <button (click)="add(heroName.value); heroName.value=''" class="btn btn-danger">
+      添加
+    </button>
+  </div>
+  <table class="table table-bordered table-striped" style="margin-top: 20px">
+    <tr>
+      <th>编号</th>
+      <th>姓名</th>
+      <th>设备管理</th>
+      <th>开启时间</th>
+      <th>设备状态</th>
+      <th>操作</th>
+    </tr>
+    <tr  *ngFor="let hero of heroes  " (click)="onSelect(hero)"
+         [class.selected]="hero === selectedHero">
+      <td>{{hero.id}}</td>
+      <td>{{hero.name}}</td>
+      <td>{{hero.Equipmentmanagement}}</td>
+      <td>{{hero.Openingtime}}</td>
+      <td>{{hero.devicestatus}}</td>
+      <td><button (click)="delete(hero); $event.stopPropagation()" class="btn btn-primary">删除</button>
+        <button (click)="gotoDetail()" class="btn btn-success">编辑</button>
+      </td>
+    </tr>
+  </table>
+
+
+</div>

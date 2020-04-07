@@ -1,0 +1,41 @@
+<div >
+<div>
+  <app-navbar></app-navbar>
+</div>
+<div style="margin-top:55px;" >
+  <div class="row" id="container">
+    <div class="col-lg-3 sidebar-scroll" style="padding-left: 0px;margin-left: 0px;width: 20%">
+      <aside  id="sidebar" class="sidebar row nav-collapse collapse" style=" position: fixed;padding-left: 0px;margin-left: 0px;width: 20%">
+        <ul id="nav" class="sidebar-menu">
+          <li class="active sub-menu">
+            <a appHightlight>
+              <i class="fa fa-home" ></i>
+              首页<i style="float: right" class="fa fa-caret-right "></i>
+            </a>
+          </li>
+          <li class="has_sub sub-menu"><a ><i class="fa fa-user "></i> 人员档案<i style="float: right" class="fa fa-caret-right "></i></a>
+          </li>
+          <li class="has_sub sub-menu"><a><i class="fa fa-table"></i> 能源管理<i style="float: right" class="fa fa-caret-right "></i></a>
+          </li>
+          <li class="has_sub sub-menu" ><a  ><i class="fa fa-file-audio-o"></i> 水监控管理<i style="float: right" class="fa fa-caret-right "></i></a>
+          </li>
+          <li class="has_sub sub-menu"><a ><i class="fa fa-file-audio-o"></i> 气报表管理<i style="float: right" class="fa fa-caret-right "></i></a>
+          </li>
+          <li class="has_sub sub-menu"><a  ><i class="fa fa-bar-chart"></i>环安管理<i style="float: right" class="fa fa-caret-right "></i></a></li>
+          <li class="has_sub sub-menu"><a routerLink="/heroesgas"><i class="fa fa-gear"></i>权限管理<i style="float: right" class="fa fa-caret-right "></i></a></li>
+        </ul>
+
+      </aside>
+      <!--<div  style="margin-top: 450px;margin-left: 40px">-->
+        <!--<app-sitestat></app-sitestat>-->
+      <!--</div>-->
+    </div>
+    <div class="col-lg-9"  style="margin-bottom: 20px;background-color: white;width: 80%" id="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<div >
+  <app-footer></app-footer>
+</div>
+</div>
