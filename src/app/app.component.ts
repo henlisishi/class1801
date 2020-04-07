@@ -16,6 +16,7 @@ export class AppComponent {
   // 账号、密码
   public account: string;
   public password: string;
+  public tel: string;
   // 管理系统标题
   public title = Config.SYSTEM_SETTING.title;
   // 选中效果
